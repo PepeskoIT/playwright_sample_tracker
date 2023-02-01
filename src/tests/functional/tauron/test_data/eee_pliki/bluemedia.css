@@ -1,0 +1,64 @@
+
+.bluemedia-channel-row{
+    margin-top: 20px;
+}
+
+
+.bluemedia-channel .channel-box{
+    border: 1px solid #D1D1D1;
+    padding: 7px 10px 0 7px;
+    min-height: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.bluemedia-channel .channel-box.active{
+    border-color: black;
+    background-color: #EEE;
+}
+
+
+/*-----------------------------------*/
+
+
+.bluemedia-channel .bluemedia-radio-container, .bluemedia-channel .bluemedia-icon-container, .bluemedia-channel .bluemedia-label-container{
+    padding: 5px;
+}
+
+.bluemedia-channel .bluemedia-radio-container{
+    float: left;
+    width: 15%;
+}
+
+.bluemedia-channel .bluemedia-icon-container{
+    float: left;
+    width: 85%;
+}
+
+.bluemedia-channel .bluemedia-label-container{
+    clear: both;
+    text-align: center;
+    font-size: 0.9em;
+    margin-left: 15%;
+}
+
+
+/*---------------------------------------------*/
+
+
+.bluemedia-channel .bluemedia-radio-button{
+    vertical-align: middle;
+}
+
+.bluemedia-channel .bluemedia-image{
+    max-height: 80px;
+    max-width: 100px;
+    box-sizing: border-box;
+    margin: auto;
+    display: block;
+}
+
+.bluemedia-channel .bluemedia-label {
+    text-align: center;
+}

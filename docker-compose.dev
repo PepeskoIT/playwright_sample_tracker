@@ -1,0 +1,49 @@
+version: '3.7'
+services:
+  buybot-backend:
+    build:
+      args:
+        HTTP_PROXY: $CORPORATE_HTTP_PROXY
+        HTTPS_PROXY: $CORPORATE_HTTP_PROXY
+        http_proxy: $CORPORATE_HTTP_PROXY
+        https_proxy: $CORPORATE_HTTP_PROXY
+    env_file:
+      - ./docker/conf/elasticsearch.env
+    container_name: $PROD_APP_CONTAINER_NAME
+    ports:
+      - 8088:$APP_INTERNAL_HTTP_PORT
+    environment:
+      - APPLICATION_KEY=prod
+      - CORPORATE_HTTP_PROXY=$CORPORATE_HTTP_PROXY
+      - POSTGRES_URL=$PROD_CMDB_POSTGRESQL_CONTAINER_NAME
+      - DASHBOARD_CACHE=True
+      - FRONT_BASE_URL=https://release-dashboard.cmdb.lab.ingenico.com
+      - FOREMAN_RESULT_NB=10000
+      - FOREMAN_TIMEOUT=0
+      - JIRA_MAX_RETRIEVE_PER_RUN=300
+    volumes:            
+      - /var/lib/docker/python-cmdb-mb/front/generated:/front/generated       
+      - /var/lib/docker/python-cmdb-mb/output:/output 
+
+  postgres:
+    container_name: $PROD_CMDB_POSTGRESQL_CONTAINER_NAME
+    ports:
+      - 5432:$POSTGRESQL_INTERNAL_PORT
+    volumes:
+      - cmdb-postgres-data:/var/lib/postgresql/data
+
+  healthcheck:
+    build:
+      args:
+        HTTP_PROXY: $CORPORATE_HTTP_PROXY
+        HTTPS_PROXY: $CORPORATE_HTTP_PROXY
+        http_proxy: $CORPORATE_HTTP_PROXY
+        https_proxy: $CORPORATE_HTTP_PROXY
+    environment:
+      - CMDB_HOST_URL=$PROD_APP_CONTAINER_NAME
+      - CMDB_POSTGRESQL_URL=$PROD_CMDB_POSTGRESQL_CONTAINER_NAME
+      - HC_SLACK_ENABLE=$HC_SLACK_ENABLE_PROD
+
+volumes:
+  cmdb-postgres-data:
+

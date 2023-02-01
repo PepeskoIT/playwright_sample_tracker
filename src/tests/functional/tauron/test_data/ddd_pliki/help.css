@@ -1,0 +1,105 @@
+div.help{
+    position: fixed;
+    bottom: 30px;
+    width: 348px;
+    right: -348px;
+    transition: right .5s;
+    z-index: 2;
+}
+
+div.help.active{
+    right: 0;
+}
+div.help label{
+	font-size: 0.8em;
+}
+div.help>p{
+    position: absolute;
+    right: 348px;
+    background: url('/assets/frontend/images/newsletter.png');
+	margin: 0;
+	padding: 0;
+    width: 86px;
+    height: 80px;
+    opacity: 1;
+    transition: opacity .5s;
+	cursor: pointer;
+}
+
+.webp div.help>p {
+	background: url('/media/assets-frontend-images-=-newsletter.png.webp');
+	background-size: cover;
+}
+
+div.help.active>p{
+	opacity: 0;
+	pointer-events: none;
+	cursor: auto;
+}
+div.help>div.help-body>form .checkbox label{
+	color: #000;
+	line-height: 12px;
+	font-size: 12px;
+	padding-left: 15px;
+}
+div.help>div.help-body>form input.form-control{
+	border-color: #000;
+}
+div.help>div.help-body>form input.form-control:focus{
+	border-color: #E2007A;
+}
+div.help>div.help-body>form input[type="checkbox"]{
+	margin-top: 1px;
+	margin-left: -15px;
+	width: 10px;
+	height: 10px;
+}
+div.help>div.help-body>form hr{
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+div.help>div.help-body>form{
+	color: #000;
+	font-size: 16px;
+	line-height: 17px;
+    padding: 10px 20px 20px 20px;
+	background: #fff;
+    border-left: 2px solid #354290;
+    border-right: 2px solid #354290;
+    border-bottom: 2px solid #354290;
+}
+
+.swal2-modal.newsletter-add{
+	border-radius: 0;
+	border: 2px solid #354290;
+	background: #fff url('/assets/frontend/images/tlo-newsletter.jpg') top center no-repeat !important;
+	background-size: contain !important;
+}
+
+.swal2-modal.newsletter-add img.newsletter-add-icon{
+	width: 40%;
+	margin-left: -30px;
+	margin-top: 20px;
+}
+.swal2-modal.newsletter-add h1{
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.swal2-modal.newsletter-add .swal2-styled:hover,
+.swal2-modal.newsletter-add .swal2-styled:focus,
+.swal2-modal.newsletter-add .swal2-styled:active,
+.swal2-modal.newsletter-add .swal2-styled{
+	outline: none !important;
+}
+.swal2-modal.newsletter-add .swal2-spacer{
+	margin-top: 0 !important;
+}
+
+.swal2-modal.newsletter-add .swal2-icon{
+	box-shadow: 0px 0px 0px 5px #fff !important;
+    background: #fff;
+}
+.swal2-modal.newsletter-add .swal2-icon.swal2-info{
+	display: none !important;
+}

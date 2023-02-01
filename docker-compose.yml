@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+ buybot-backend:
+    build:
+      dockerfile: docker/Dockerfile.buybot
+      context: .
+      args:
+        - APP_PATH=$APP_PATH
+    volumes:
+      - /var/log/buybot:$APP_PATH/logs
+      - /tmp/buybot/dumps:$APP_PATH/dumps
+    environment:
+      - DISCORD_TOKEN=$DISCORD_TOKEN
+      - PGG_PASSWORD1=$PGG_PASSWORD1
+      - PGG_USERNAME1=$PGG_USERNAME1
+      - PGG_PASSWORD2=$PGG_PASSWORD2
+      - PGG_USERNAME2=$PGG_USERNAME2
+      - TAURON_USERNAME1=$TAURON_USERNAME1
+      - TAURON_PASSWORD1=$TAURON_PASSWORD1
+      - PESEL1=$PESEL1
+      - TAURON_USERNAME2=$TAURON_USERNAME2
+      - TAURON_PASSWORD2=$TAURON_PASSWORD2
+      - PESEL2=$PESEL2
+      - TAURON_USERNAME3=$TAURON_USERNAME3
+      - TAURON_PASSWORD3=$TAURON_PASSWORD3
+      - PESEL3=$PESEL3
+    restart: always
+    user: root

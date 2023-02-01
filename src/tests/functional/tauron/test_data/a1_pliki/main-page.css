@@ -1,0 +1,273 @@
+#page_products .product{
+	border: 3px solid #EDEDED;
+	margin-top: 20px;
+	position: relative;
+	/*height: 396px;*/
+}
+#page_products .product p{
+	margin-bottom: 3px;
+	font-weight: 600;
+}
+#page_products .product .price{
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 3px;
+}
+#page_products .product .px-20{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#page_products .product .mt-10{
+	margin-top: 10px;
+}
+#page_products .product .mt-20{
+	margin-top: 20px;
+}
+#page_products .product .mb-15{
+	margin-bottom: 15px;
+}
+#page_products .product .more{
+	font-weight: 500;
+	margin-top: 5px;
+}
+#page_products .product .param{
+	font-size: 17px;
+}
+#page_products .product h3{
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+#page_products .product img{
+	margin: -30px auto 0 auto;
+}
+#page_products .product.big{
+	height: 345px;
+}
+#page_products .product.big img{
+	margin: -50px auto 0 auto;
+}
+#page_products .product .blue-box{
+	background: #262D61;
+	background: -moz-linear-gradient(top, #353E8B 0%, #1F2652 100%);
+	background: -webkit-linear-gradient(top, #353E8B 0%, #1F2652 100%);
+	background: -o-linear-gradient(top, #353E8B 0%, #1F2652 100%);
+	background: -ms-linear-gradient(top, #353E8B 0%, #1F2652 100%);
+	background: linear-gradient(to bottom, #353E8B 0%, #1F2652 100%);
+
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+	top: 20px;
+	left: -30px;
+	position: relative;
+	z-index: 1;
+	border-radius: 50%;
+}
+#page_products .product .blue-box strong{
+	font-size: 30px;
+	line-height: 25px;
+}
+#page_products .product .blue-box>a:focus,
+#page_products .product .blue-box>a:hover,
+#page_products .product .blue-box>a{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+#page_products .product .blue-box b{
+	font-weight: 600;
+}
+#profits{
+	background: url('/assets/frontend/images/tlo-korzysci.jpg') center center no-repeat;
+	background-size: cover;
+	margin: 30px 0 30px 0;
+	padding: 0 0 30px 0;
+}
+.webp #profits{
+	background: url('/media/assets-frontend-images-=-tlo-korzysci.jpg.webp') center center no-repeat;
+	background-size: cover;
+}
+
+#profits .blue-box{
+	margin: 80px 0 0 0;
+	border: 3px solid #384591;
+	background: #fff;
+	text-align: center;
+	padding: 0 30px 20px 30px;
+	font-weight: 500;
+	color: #000;
+	line-height: 18px;
+}
+#profits .blue-box img{
+	margin-top: -60px;
+}
+#profits h2{
+	font-weight: 600;
+}
+#profits h3{
+	font-weight: 600;
+	font-size: 22px;
+}
+
+@media (max-width: 991.5px) {
+	#profits .blue-box{
+		font-size: 1.1em;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#page_products .product,
+	#page_products .product.big{
+		height: auto;
+		padding-bottom: 20px;
+	}
+}
+@media (min-width: 767.5px) and (max-width: 991.4px ) {
+    #profits .blue-box{
+        height: 280px;
+    }
+    #page_products .element_2_on .product.big img{
+        margin: -25px auto 0 -15px;
+        max-width: 150px;
+    }
+    #page_products .element_2_on .product img{
+        margin: -25px auto 0 -25px;
+        max-width: 165px;
+    }
+    #page_products .element_2_on .product .blue-box{
+        left: 5px;
+    }
+}
+
+@media (min-width: 991.5px) and (max-width: 1199.5px ){
+    #page_products .element_2_on .product.big img{
+        margin: -35px auto 0 -18px;
+        max-width: 190px;
+    }
+    #page_products .element_2_on .product img{
+        margin: -30px auto 0 -25px;
+        max-width: 200px;
+    }
+    #page_products .element_2_on .product .blue-box{
+        left: 10px;
+    }
+}
+
+@media (max-width: 767.5px) {
+	#page_products .product.big .info{
+		margin-top: -35px;
+	}
+	#page_products .product .info{
+		margin-top: -100px;
+		padding: 0 40px;
+	}
+	#page_products .product .add{
+		text-align: center;
+	}
+	#page_products .product.big img{
+		margin-top: -90px;
+	}
+	#page_products .product img{
+		margin-top: -100px;
+	}
+	#page_products .product.big .blue-box{
+		top: 120px;
+	}
+	#page_products .product .blue-box{
+		left: -108px;
+		top: 150px;
+	}
+	#page_products .product {
+		margin-top: 10px;
+	}
+	#page_products .product,
+	#page_products .product.big {
+		padding-bottom: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	#page_products .product .price {
+		text-align: center;
+		width: 130px;
+		display: block;
+		margin: 0 auto;
+	}
+	#page_products .product h3{
+		font-size: 20px;
+	}
+}
+@media (min-width: 1200px) {
+    .product h3 {
+        max-width: 250px;
+    }
+    #page_products .product .param {
+        width: 200px;
+    }
+    
+    .element_3_on .blue-box{
+        left: 0px !important;
+        top: 100px !important;
+    }
+    .element_3_on .product-img {
+        margin-top: 70px !important;
+        width: 150px;
+        max-width: none !important;
+        margin-left: -19px !important;
+
+    }
+    .element_3_on .product {
+        min-height: 500px !important;
+    }
+    .element_3_on .product-info-right {
+        margin-left: -20px !important;
+    }
+}
+
+@media (min-width: 991.5px) and (max-width: 1199.5px) {
+    .element_3_on .blue-box{
+        left: -12px !important;
+        top: 100px !important;
+    }
+    .element_3_on .product-img {
+        margin-top: 70px !important;
+        width: 125px;
+        max-width: none !important;
+        margin-left: -19px !important;
+
+    }
+    .element_3_on .product {
+        min-height: 500px !important;
+    }
+    .element_3_on .product-info-right {
+        margin-left: -20px !important;
+    }
+    #page_products .product .param {
+        font-size: 13px;
+    }
+    #page_products .product.big {
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.5px) {
+    #page_products .product .param {
+        font-size: 16px;
+    }
+    #page_products .product h3 {
+        font-size: 18px;
+    }
+    .element_3_on .product {
+        min-height: 770px !important;
+    }
+    .element_3_on .product-info-right {
+        margin: 10px !important;
+    }
+    .element_3_on .element_3_img_box {
+        height: 310px;
+    }
+}

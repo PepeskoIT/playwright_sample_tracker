@@ -1,0 +1,7 @@
+DATA_FOLDER = "dumps"
+
+SESSION_FOLDER = "session"
+TAURON_DATA_FOLDER = "tauron"
+PGG_DATA_FOLDER = "pgg"
+
+ERROR_DELAY_IN_S = 0.4
